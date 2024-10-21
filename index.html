@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <section>
+    <h1 class="titulo">Lista de Tarefas</h1>
+    <div data-areaContainer="areaContainer">
+      <div class="tarefa" >
+        <input type="checkbox" name="task_completed" class="marcador">
+        <p>Lavar Louça</p>
+        <button class="lixeira">🗑️</button>
+      </div>
+
+      <div class="tarefa">
+        <input type="checkbox"  name="task_completed" class="marcador">
+        <p>Estudar</p>
+        <button class="lixeira">🗑️</button>
+      </div>
+    </div>
+    
+    <form class="tarefaNova">
+      <input type="text" name="caixaDTexto" id="caixaDTexto">
+      <button class="enviar">&#x27A4;</button>
+    </form>
+  </section>
+  <script defer type="module" src="js/script.js"></script>
+</body>
+
+</html>

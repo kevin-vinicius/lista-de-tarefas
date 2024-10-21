@@ -1,0 +1,183 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Playfair Diplay';
+  src: url(fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
+  font-family: 'Dancing Script';
+  src: url(fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf);
+}
+
+body{
+  overflow: hidden;
+}
+
+.titulo{
+  font-family: 'Dancing Script';
+  font-size: 5rem;
+  margin-top: 10px;
+  color: #1C1C1C;
+}
+
+section{
+  background-color: #51bfb8;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+[data-areaContainer="areaContainer"]{
+  background-color: #D4F1EF;
+  height: 77%;
+  width: 80%;
+  max-width: 1500px;
+  margin: 20px 0 25px 0;
+  border: 1px solid black;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+
+[data-areaContainer="areaContainer"] > * {
+  flex-shrink: 0;  
+  width: 100%;    
+}
+
+
+[data-areaContainer="areaContainer"]::-webkit-scrollbar {
+  width: 13px; 
+}
+
+[data-areaContainer="areaContainer"]::-webkit-scrollbar-track {
+  background: #D4F1EF;
+  border-radius: 12px; 
+  margin: 25px 0;
+}
+
+
+[data-areaContainer="areaContainer"]::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 12px;    
+  border: 3px solid #D4F1EF;
+}
+
+
+.tarefa{
+ background-color: white;
+ margin: 1rem;
+ height: auto;
+ width: 90%;
+ border-radius: 1rem;
+ display: flex;
+ align-items: center;
+ position: relative;
+ padding: 15px;
+}
+
+.tarefa p {
+  font-family: 'Playfair Diplay';
+  font-size: 1.2rem;
+  margin: 0 1rem;          
+  word-wrap: break-word;    
+  white-space: normal;      
+  max-width: calc(95% - 80px); 
+}
+
+.tarefaNova{
+  display: flex;
+  width: 80%;
+  max-width: 1500px;
+  height: 35px;
+  border-radius: .5rem;
+  border: 1px solid black;
+  border-left: none;
+  border-right: none;
+}
+
+#caixaDTexto{
+  width: 98%;
+  padding: .5rem;
+  box-sizing: border-box;
+  border: none;
+  border-left: 1px solid black;
+  border-radius: .5rem 0px 0px .5rem;
+}
+
+.enviar{
+  padding: 0 5%;
+  font-size: 1.3rem;
+  border: none;
+  border-right: 1px solid black;
+  border-radius:  0px .5rem .5rem 0px;
+  
+}
+
+.riscado {
+  text-decoration: line-through;
+  color: gray; /* Cor opcional para o texto riscado */
+}
+
+.tarefa{
+  animation: show-up .5s forwards;
+}
+
+@keyframes show-up{
+  from{
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.riscado{
+  animation: show-right .5s forwards;
+}
+
+@keyframes show-right{
+  from{
+    opacity: 0;
+    transform: translate3d(30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}  
+
+@media (max-width: 700px){
+  .titulo{
+    font-size: 3rem;
+  }
+  [data-areaContainer="areaContainer"]{
+    margin: 10px 0 10px 0;
+    height: 70%;
+  }
+  .tarefa{
+    padding: 10px;
+  }
+  .tarefa p {
+  margin: 0 1rem;          
+  word-wrap: break-word;    
+  white-space: normal;      
+  max-width: calc(83% - 80px); 
+  font-family: 'Playfair Diplay';
+  }
+  .tarefaNova{
+    height: 40px;
+  }
+  .enviar{
+    padding: 0 6%;
+  }
+}

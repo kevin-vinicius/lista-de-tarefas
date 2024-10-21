@@ -1,0 +1,36 @@
+.marcador {
+  margin: 0 1rem;
+  width: 39px; 
+  height: 39px;
+  border-radius: 50%; 
+  accent-color: #51bfb8; 
+  -webkit-appearance: none; 
+  appearance: none; 
+  background-color: white; 
+  border: 2px solid #51bfb8; 
+  cursor: pointer;
+  display: inline-block;
+}
+
+.marcador:checked {
+  background-color: #51bfb8; 
+  border-color: #51bfb8; 
+}
+
+.marcador:checked::before {
+  content: '✔'; 
+  display: block;
+  text-align: center;
+  font-size: 25px;
+  color: white; 
+}
+
+
+.lixeira{
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
