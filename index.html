@@ -5,25 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de Tarefas</title>
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    #auth-container {
-      display: none; /* Esconde o formulário inicialmente */
-      margin-top: 20px;
-      border: 1px solid #ccc;
-      padding: 20px;
-      border-radius: 8px;
-      background-color: #f9f9f9;
-    }
-    #auth-container h2 {
-      margin: 0 0 10px;
-    }
-  </style>
-
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  
   <section>
     <h1 class="titulo">Lista de Tarefas</h1>
     <div data-areaContainer="areaContainer">
@@ -44,52 +29,8 @@
       <input type="text" name="caixaDTexto" id="caixaDTexto">
       <button class="enviar">&#x27A4;</button>
     </form>
-
-    <button id="toggle-auth">Mostrar Autenticação</button> <!-- Botão para mostrar o formulário -->
-
-    <div id="auth-container">
-      <h2>Cadastro</h2>
-      <input type="email" id="cadastro-email" placeholder="Email" />
-      <input type="password" id="cadastro-senha" placeholder="Senha" />
-      <button id="btn-cadastrar">Cadastrar</button>
-
-      <h2>Login</h2>
-      <input type="email" id="login-email" placeholder="Email" />
-      <input type="password" id="login-senha" placeholder="Senha" />
-      <button id="btn-login">Login</button>
-    </div>
   </section>
-
-  
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-analytics.js"; // Isso é opcional
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyBURb5EqXDRRbh0VoQJQXN_uRXH0xq0hu0",
-      authDomain: "lista-de-tarefas-e0218.firebaseapp.com",
-      projectId: "lista-de-tarefas-e0218",
-      storageBucket: "lista-de-tarefas-e0218.appspot.com",
-      messagingSenderId: "243985028478",
-      appId: "1:243985028478:web:346bac44adb2aef6becf2f",
-      measurementId: "G-CTN26DKC2Z" // Isso também é opcional
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app); // Isso é opcional
-  </script>
   <script defer type="module" src="js/script.js"></script>
-  <script>
-    // Script para alternar a visibilidade do formulário de autenticação
-    document.getElementById("toggle-auth").addEventListener("click", () => {
-      const authContainer = document.getElementById("auth-container");
-      if (authContainer.style.display === "none" || authContainer.style.display === "") {
-        authContainer.style.display = "block"; // Mostra o formulário
-      } else {
-        authContainer.style.display = "none"; // Esconde o formulário
-      }
-    });
-  </script>
 </body>
 
 </html>
